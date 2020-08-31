@@ -1,0 +1,2 @@
+<?php die('forbidden'); ?>
+{"appid":"101431677","appkey":"5a917b85df1dd57738dd55902557cdbd","callback":"http://www.xiezhong.xin/index.php/user/qq_login","errorReport":true,"storageType":"file","host":"localhost","user":"root","password":"root","database":"test","scope":null}

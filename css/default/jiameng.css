@@ -1,0 +1,104 @@
+*{margin:0;padding:0;}
+body{background-color:#fff;font-size:14px;font-family: "微软雅黑" arial;}
+h1,h2,h3,h4,h5,h6,p,ul,li{margin:0;padding:0;font-size:14px;font-weight:normal;}
+ul{list-style:none;}
+a{text-decoration:none;}
+.commonwidth{width:1200px;margin:0 auto;}
+.fl{float:left;}
+.fr{float:right;}
+.clearfix{zoom:1;}
+.clearfix::after{content:"";display:block;clear:both;width:0;height:0;}
+input,textarea{margin:0;padding:0;border:none;resize:none;outline:none;}
+
+
+
+.top{width:100%;background:#fff;}
+.phone{padding:10px 0;overflow:hidden;}
+.phone-pic{width:600px;height:550px;background:url(../../images/default/jiameng/phone.jpg) no-repeat 126px 0;}
+.phone-text{padding-top:190px;text-align:center;}
+.phone-text p:nth-of-type(1), .phone-text p:nth-of-type(2){font-size:22px;color:#4d4d4d;line-height:54px;}
+.phone-text p:nth-of-type(3){font-size:26px;color:#000000;line-height:68px;}
+.introduce_wrap{width:100%;height:590px;background:url(../../images/default/jiameng/introduce_bg.jpg) no-repeat center center;}
+.introduce{padding-top:55px;}
+.main_tit{text-align:center;font-size:30px;color:#fff;font-family:"微软雅黑";}
+.sub_tit{text-align:center;font-size:22px;color:#fff;font-family:"微软雅黑";}
+.info_box{padding-top:30px;}
+.info_pic{width:509px;height:284px;margin:0 50px;}
+.info_text{width:560px;}
+.info_text p{font-size:22px;color:#fff;line-height:38px;}
+.info_text a{width:175px;line-height:40px;text-align:center;margin:40px 0 0 370px;display:block;font-size:16px;background:#fff;color:#e61d47;}
+.info_text a:hover{color:#000;}
+.product_wrap{width:100%;background:#fff;}
+.product{padding-top:55px;}
+.product .main_tit{color:#000;}
+.product .sub_tit{color:#000;}
+.product_box{padding-top:20px;}
+.product_info{text-align:center;width:566px;overflow:hidden;}
+.product_info h3{font-size:24px;color:#000;}
+.product_info h5{font-size:16px;color:#474747;line-height:36px;margin-bottom:20px;}
+.product_l{width:273px;height:380px;margin-right:15px;}
+.product_r{width:272px;}
+.product_t{width:100%;height:183px;}
+.product_b{width:100%;height:183px;margin-top:15px;}
+.product_bottom{padding:40px 0;overflow:hidden;}
+.product_bottom ul{margin-bottom:30px;width:120%;}
+.product_bottom ul li{float:left;box-shadow:2px 2px 2px #bcbcbc;margin-right:13px;}
+.product_bottom .last{margin-right:0;}
+.product_bottom p{text-align:right;font-size:18px;color:#000;}
+.type_1_wrap{width:100%;height:770px;background:url(../../images/default/jiameng/introduce_bg2.jpg) no-repeat center center;}
+.type_tit{font-size:30px;padding-bottom:20px;color:#fff;text-align:center;padding-top:50px;}
+.type_text1{font-size:25px;color:#fff;line-height:74px;padding-left:30px;background:url(../../images/default/jiameng/arrow1.png) no-repeat left center;}
+.type_text2{font-size:22px;color:#fff;line-height:42px;}
+.type1_box{padding-top:20px;}
+.type_img img{border-radius:10px;overflow:hidden;width:590px;height:400px;}
+.type_img p{text-align:center;font-size:18px;color:#fff;line-height:70px;}
+.type_2_wrap{width:100%;height:723px;padding-top:60px;background:url(../../images/default/jiameng/introduce_bg3.jpg) no-repeat center center;}
+.type_2 .type_text1, .type_2 .type_text2, .type_4 .type_text1, .type_4 .type_text2{color:#000;}
+.type_2 .type_text1, .type_4 .type_text1{background:url(../../images/default/jiameng/arrow2.png) no-repeat left center;}
+.shop{margin-top:20px;}
+.shop p{line-height:60px;font-size:22px;color:#000;text-align:center;}
+.type_3_wrap{width:100%;height:440px;padding-top:67px;background:url(../../images/default/jiameng/introduce_bg5.jpg) no-repeat center center;}
+.type_3 .img_box{width:584px;height:354px;border-radius:6px;overflow:hidden;}
+.channel_text{width:380px;margin-right:110px;}
+.channel_text h3{line-height:64px;font-size:25px;color:#fff;padding-left:30px;background:url(../../images/default/jiameng/arrow1.png) no-repeat left center;}
+.channel_text p{line-height:50px;font-size:22px;color:#fff;text-indent:2em;}
+.type_4_wrap{width:100%;padding-top:40px;height:720px;background:url(../../images/default/jiameng/introduce_bg4.jpg) no-repeat center center;}
+.service_box{margin-top:50px;}
+.service{text-align:center;}
+.service h4{font-size:24px;color:#000;font-weight:600;line-height:48px;}
+.service p{font-size:18px;color:#000;line-height:40px;}
+.ad_list{padding-top:30px;}
+.ad_list li{float:left;margin:0 10px;box-shadow: 2px 2px 2px #bcbcbc;}
+.type_5_wrap{width:100%;height:544px;padding-top:30px;background:#e61d47;}
+.meet{background:url(../../images/default/jiameng/meet.jpg) no-repeat;width:1168px;margin:40px auto 0;height:304px;border-radius:8px;overflow:hidden;}
+.attend_wrap{width:100%;height:460px;padding-top:40px;background:#fff;}
+.attend h2{font-size:26px;line-height:46px;font-family:"微软雅黑";color:#e4007e;text-align:center;}
+.attend h3{font-size:20px;line-height:40px;color:#e4007e;position:relative;text-align:center;}
+.attend h3 span{padding:0 60px;background:#fff;position:relative;z-index:2;}
+.attend h3::after{content:"";height:1px;width:100%;background:#e4007e;position:absolute;left:0%;top:20px;}
+.attend_l h2{padding-top:10px;font-size:30px;line-height:45px;font-weight:900;color:#E4007E;}
+.attend_l p{font-size:14px;color:#000;line-height:32px;}
+.attend_l strong{font-size:15px;color:#E4007E;line-height:24px;}
+.attend_l .code{width:139px;height:139px;margin:15px;box-shadow:3px 3px 5px #d5d4d4;}
+.attend_r p{font-size:16px;color:#000;padding-top:20px;line-height:24px;}
+.attend_r form{padding-top:50px;}
+.attend_r label{line-height:38px;font-size:16px;color:#000;}
+.attend_r input{width:270px;height:15px;padding:6px;border:1px solid #ccc;font-size:14px;}
+.mes span{font-size:16px;color:#000;}
+.mes{padding-top:5px;}
+.mes textarea{width:270px;height:53px;border:1px solid #ccc;padding:6px;}
+.attend_r input.submit{width:108px;line-height:36px;text-align:center;color:#fff;font-size:16px;margin:14px 0 0 210px;background:#E4007E;display:block;}
+.attend_r input.submit{height:auto;padding:0;border:0;}
+.go_top{
+    width:50px;
+    height:50px;
+    background:url(../../images/default/jiameng/goTop.png) no-repeat center center #fff;
+    background-size:100%;
+    position:fixed;
+    right:15px;
+    bottom:150px;
+    z-index:100;
+    cursor:pointer;
+     border-radius: 100%;
+    display:none;
+}

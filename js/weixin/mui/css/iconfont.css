@@ -1,0 +1,46 @@
+
+@font-face {font-family: "iconfont";
+  src: url('../fonts/iconfont.ttf') format('truetype') /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-icon:before { content: "\e61b"; }
+.icon-daifukuan:before { content: "\e61c"; }
+.icon-weibiaoti5:before { content: "\e61e"; }
+.icon-daishouhuo:before { content: "\e61d"; }
+.icon-tencent-circle:before { content: "\e614"; }
+.icon-qzone-circle:before { content: "\e615"; }
+.icon-sina-circle:before { content: "\e616"; }
+.icon-shareto_weixin:before { content: "\e617"; }
+.icon-shareto_qq:before { content: "\e618"; }
+.icon-dress:before { content: "\e60a"; }
+.icon-poncho:before { content: "\e60b"; }
+.icon-shirt4:before { content: "\e60c"; }
+.icon-shirt5:before { content: "\e60d"; }
+.icon-watch:before { content: "\e60e"; }
+.icon-avatar:before { content: "\e600"; }
+.icon-book:before { content: "\e601"; }
+.icon-cancel:before { content: "\e610"; }
+.icon-chat2:before { content: "\e60f"; }
+.icon-edit:before { content: "\e61f"; }
+.icon-garbage:before { content: "\e602"; }
+.icon-headphones:before { content: "\e611"; }
+.icon-heart:before { content: "\e603"; }
+.icon-house:before { content: "\e604"; }
+.icon-link:before { content: "\e619"; }
+.icon-magnifyingglass:before { content: "\e605"; }
+.icon-next:before { content: "\e61a"; }
+.icon-padlock:before { content: "\e606"; }
+.icon-settings:before { content: "\e607"; }
+.icon-share:before { content: "\e608"; }
+.icon-shoppingbag:before { content: "\e609"; }
+.icon-shoppingcart:before { content: "\e612"; }
+.icon-funnel:before { content: "\e613"; }
+.icon-star:before { content: "\e620"; }
