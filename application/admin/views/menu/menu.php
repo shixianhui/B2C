@@ -193,7 +193,7 @@ if ($admingroupInfo) {
 	 <!-- 商品管理结束 -->
 	 <?php if (isPermissions($admingroupInfo, 'theme_index') || isPermissions($admingroupInfo, 'store_grade_index') || isPermissions($admingroupInfo, 'store_category_index') || isPermissions($admingroupInfo, 'store_index')) { ?>
 	 <!-- 店铺管理开始 -->
-	 <table border="0" cellpadding="0" cellspacing="0" width="100%">
+	 <table border="0" cellpadding="0" cellspacing="0" width="100%" style="display: none">
         <tbody>
 		 <tr>
           <td style="padding: 2px 2px 0px;" bgcolor="#ffffff">
