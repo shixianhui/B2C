@@ -1,0 +1,13 @@
+/* pages/cart/pay_succeed/pay_succeed.wxss */
+page{background:#f5f5f5;}
+.m-tip{ background:#fff; text-align:center; font-size:32rpx; padding:20rpx 0rpx;}
+.m-tip .h3{color:#2a2a2a;font-weight:normal;font-size:36rpx;}
+.m-tip .tit{font-size: 28rpx;margin-top: 0;margin-bottom: 20rpx;color: #8f8f94;}
+.m-tip .h4{text-align:left;font-weight:normal; padding:0 24rpx;margin-top:60rpx;font-size:30rpx;}
+.m-tip .txt{text-align:left;padding:0 24rpx;font-size:26rpx;color:#333;}
+.btn{margin:4rpx 0 20rpx;float:left;width:100%;}
+.m-tip .btn text{ display:inline-block; line-height:64rpx; border:#e61d47 1px solid; padding:0rpx 30rpx; border-radius:8rpx; -webkit-border-radius:8rpx; font-size:28rpx; color:#e61d47;margin:20rpx 4vw 0;}
+.m-tip .btn text:last-of-type{border:#888 1px solid; color:#888}
+.tip-title{padding:0 24rpx;margin-top:20rpx;font-size:24rpx;}
+.tip-title img{width:32rpx;vertical-align:middle;margin-right:10rpx;}
+.icon-small{float:left;margin-right: 10rpx;}

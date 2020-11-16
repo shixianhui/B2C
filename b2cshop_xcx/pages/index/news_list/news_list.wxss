@@ -1,0 +1,9 @@
+/* pages/index/news_list/news_list.wxss */
+
+.container>view{width:100%;}
+.container>view>text{text-align:left;width:100%;display:block;background:#f5f5f5;padding:0 20rpx;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;color:#333;font-size:28rpx;line-height:80rpx;}
+.container>view .list{width:100%;}
+.container>view .list .txt{padding:0 0 0 20rpx;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;border-bottom:1px solid #f5f5f5;width:100%;float:left;line-height:80rpx;}
+.container>view .list .txt text{float:left;color:#666;font-size:28rpx;}
+.container>view .list .txt .phone{float:right;margin-right:30rpx;}
+.container>view .list .txt view{float:right;margin-top:40rpx;}

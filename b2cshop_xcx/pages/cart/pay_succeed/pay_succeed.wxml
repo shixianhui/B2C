@@ -1,0 +1,16 @@
+<!--pages/cart/pay_succeed/pay_succeed.wxml-->
+<view class="container">
+  <view class="m-tip">
+    <icon class="icon-box-img" type="success" size="90" color="#ff4949"></icon>
+    <view class="h3">支付成功</view>
+    <view class="tit">订单编号:{{order_num}}</view>
+    <view class="h4">送货信息</view>
+    <view class="txt">我们将尽快为您安排发货，请买家保持手机畅通，以便快递哥哥，能第一时间联系到您。</view>
+    <view class="btn">
+      <text bindtap="goPay">继续购物</text>
+      <text bindtap="lookOrder">查看订单</text>
+    </view>
+  </view>
+  <view class="tip-title"><icon class="icon-small"size="15"type="info_circle" color="#ff4949"></icon>安全提醒：我们是不会以任何理由要求您提供银行卡信息或支付额外费用，谨防钓鱼链接或诈骗电话</view>
+</view>
+

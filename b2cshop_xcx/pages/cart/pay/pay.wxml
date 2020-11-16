@@ -1,0 +1,51 @@
+<!--pages/cart/pay/pay.wxml-->
+<view class='container'>
+  <view class='order-number'>
+    <text>订单编号</text><text class='number'>{{order.order_number}}</text>
+  </view>
+  <view class='payment-amount'>
+    <text>支付金额</text><text class='price'>￥{{order.total}}</text>
+  </view>
+  <view class='payment-method'>
+    <view bindtap='fnWXPay' class='navigator'>
+      <image src='../../../image/weixinzhifu.png' mode='widthFix'></image>
+      <view class="info">
+        <view class="title">微信支付</view>
+        <view class="prompt">微信安全支付</view>
+      </view>
+      <view class="navigator-arrow"></view>
+    </view>
+    <view bindtap="showModal" class="navigator">
+      <image src="../../../image/yuezhifu.png" mode="widthFix"></image>
+      <view class="info">
+        <view class="title">余额支付</view>
+        <view class='prompt'>当前余额：<text>￥{{user.total}}</text></view>
+      </view>
+      <view class="navigator-arrow"></view>
+    </view>
+  </view>
+  <view class='tips'>
+    <view class='h5'>注:订单金额不对? 请下拉刷新!</view>
+  </view>
+</view>
+<view class="popover" wx:if="{{showModalStatus}}">
+  <view bindtap="hideModal" class="backdrop"></view>
+  <view animation="{{animationData}}" class="input">
+    <view class="close">
+      <text>请输入支付密码</text><icon bindtap="hideModal" class="icon-small" type="cancel" size="25" color="#333"></icon>
+    </view>
+    <form>
+      <view class="pwdInputStyle">
+        <input class="pas_input" type="number" maxlength="6" focus="true" bindinput="onChangeInput" />
+        <block wx:for="{{[0,1,2,3,4,5]}}" wx:key="">
+          <view class="itemStyle flex_Center">
+            <view wx:if="{{passWordArr[item] == true}}" class="PwdStyle"></view>
+          </view>
+        </block>
+      </view>
+    </form>
+    <view class="pwd_forget">
+      <text class="btn" bindtap='fnToGMM'>忘记密码？</text>
+    </view>
+  </view>
+</view>

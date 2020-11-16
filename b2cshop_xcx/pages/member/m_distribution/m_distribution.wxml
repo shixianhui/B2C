@@ -1,0 +1,32 @@
+<!--pages/member/m-distribution/m-distribution.wxml-->
+<view class="container">
+  <!-- <view class="m_funds">
+    <view>
+      <text>总推广提成</text>
+      <text class="price">¥{{content.total}}</text>
+    </view>
+    <view>
+      <text>当月推广提成</text>
+      <text class="price">¥{{content.cur_total}}</text>
+    </view>
+    <view>
+      <text>上月推广提成</text>
+      <text class="price">¥{{content.prv_total}}</text>
+    </view>
+  </view> -->
+  <view class="erweima_img">
+    <view class="person">
+      <open-data class="img" type="userAvatarUrl"></open-data>
+      <!-- <image src="{{userInfo.path_thumb}}" mode="aspectFill"></image> -->
+      <view>
+        <open-data class="name" type="userNickName"></open-data>
+        <!-- <text>{{userInfo.nickname}}</text> -->
+      </view>
+    </view>
+    <view class="erweima">
+      <image src="{{tg_img}}" mode="widthFix"></image>
+      <text>扫一扫</text>
+      <button class='btn' open-type="share">分享给好友</button>
+    </view>
+  </view>
+</view>

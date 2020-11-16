@@ -1,0 +1,106 @@
+<!--pages/member/member.wxml-->
+<view class="container">
+  <view class='member'>
+    <view class='user-info'>
+    <navigator url='m_info/m_info'>
+      <view class="img-box">
+        <open-data class="img" type="userAvatarUrl"></open-data>
+      </view>
+      <!-- <open-data class="name" type="userNickName"></open-data> -->
+      <text class="name">{{userInfo.nickname}}</text>
+      </navigator>
+    </view>
+    <!-- <navigator url='m_info/m_info'>
+      <image src="{{userInfo.path_thumb}}" mode="aspectFill"></image>
+      <text>{{userInfo.nickname}}</text>
+    </navigator> -->
+  </view>
+  <view class="order">
+    <!-- <navigator url="order/order?s=all">
+      <text>我的订单</text>
+      <text>查看全部</text>
+      <view class="navigator-arrow"></view>
+    </navigator> -->
+    <view class="order-list ul">
+      <navigator class='li' hover-class="none" url="order/order?s=0">
+        <image src="../../image/img_daifukuang.png" mode="aspectFit"></image>
+        <text>待付款</text>
+        <view wx:if="{{allOrderList.count_0 > 0}}" class="i">{{allOrderList.count_0}}</view>
+      </navigator>
+      <navigator class='li' hover-class="none" url="order/order?s=1">
+        <image src="../../image/img_daifahuo.png" mode="aspectFit"></image>
+        <text>待发货</text>
+        <view wx:if="{{allOrderList.count_1 > 0}}" class="i">{{allOrderList.count_1}}</view>
+      </navigator>
+      <navigator class='li' hover-class="none" url="order/order?s=2">
+        <image src="../../image/img_daishouhuo.png" mode="aspectFit"></image>
+        <text>待收货</text>
+        <view wx:if="{{allOrderList.count_2 > 0}}" class="i">{{allOrderList.count_2}}</view>
+      </navigator>
+      <navigator class='li' hover-class="none" url="order/order?s=pj">
+        <image src="../../image/img_daipingjia.png" mode=
+        "aspectFit"></image>
+        <text>待评价</text>
+        <view wx:if="{{allOrderList.count_pj > 0}}" class="i">{{allOrderList.count_pj}}</view>
+      </navigator>
+      <navigator class='li' hover-class="none" url="order_exchange/order_exchange">
+        <image src="../../image/img_tuihuoshouhou.png" mode="aspectFit"></image>
+        <text>退换货</text>
+        <view wx:if="{{getexchangeList.count_1 + getexchangeList.count_2 > 0}}" class="i">{{getexchangeList.count_1 + getexchangeList.count_1}}</view>
+      </navigator>
+    </view>
+  </view>
+  <view class="common-tools">
+    <!-- <text class='h3'>常用工具</text> -->
+    <view class='tools-list ul'>
+      <navigator class='li' url="m_price/m_price">
+        <image src="../../image/img_zijin.png" mode="widthFix"></image>
+        <text>我的资金</text>
+      </navigator>
+      <navigator class='li' url="m_collection/m_collection">
+        <image src="../../image/img_shoucang.png" mode="widthFix"></image>
+        <text>我的收藏</text>
+      </navigator>
+      <navigator class='li' url="m_my_pj/m_my_pj">
+        <image src="../../image/img_ziliao.png" mode="widthFix"></image>
+        <text>我的评价</text>
+      </navigator>
+      <navigator class='li' url="m_address/m_address">
+        <image src="../../image/img_dizhi.png" mode="widthFix"></image>
+        <text>收货地址</text>
+      </navigator>
+      <navigator class='li' url="m_distribution/m_distribution">
+        <image src="../../image/img_yaoqin.png" mode="widthFix"></image>
+        <text>邀请好友</text>
+      </navigator>
+      <navigator class='li' url="friends/friends">
+        <image src="../../image/img_friends.png" mode="widthFix"></image>
+        <text>我的好友</text>
+      </navigator>
+      <navigator class='li' url="m_detail/m_detail">
+        <image src="../../image/img_fenxiao.png" mode="widthFix"></image>
+        <text>我的推广</text>
+      </navigator>
+      <navigator class='li' url="m_message/m_message">
+        <image src="../../image/img_xiaoxi.png" mode="widthFix"></image>
+        <text>我的消息</text>
+      </navigator>
+      <navigator class='li' url="m_phone/m_phone">
+        <image src="../../image/img_shouji.png" mode="widthFix"></image>
+        <text>绑定手机</text>
+      </navigator>
+      <navigator class='li' url="m_feedback/m_feedback">
+        <image src="../../image/img_fangkui.png" mode="widthFix"></image>
+        <text>信息反馈</text>
+      </navigator>
+      <navigator class='li' url="m_account_security/m_account_security">
+        <image src="../../image/zhanhaoanquan.png" mode="widthFix"></image>
+        <text>账户与安全</text>
+      </navigator>
+      <navigator class='li' url="m_service/m_service">
+        <image src="../../image/kefu.png" mode="widthFix"></image>
+        <text>客户服务</text>
+      </navigator>
+    </view>
+  </view>
+</view>

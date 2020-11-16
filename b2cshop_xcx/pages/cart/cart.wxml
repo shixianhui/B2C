@@ -1,0 +1,37 @@
+<view class="container main">
+  <view class="cart-box">
+    <view class="item" wx:for="{{list}}" wx:key="list">
+      <icon type="{{item.select}}" size="26" data-index="{{index}}" data-select="{{item.select}}" bindtap="change"/>
+      <view class='img-box'>
+        <image src="{{item.path_thumb}}" class="goods-img" ></image>
+      </view>
+      <view class="goods-info">
+        <view class="row">
+            <view class="goods-name">{{item.title}}</view>
+        </view>
+        <view wx:if="{{item.color_size_open == '1'}}" class="goods-type">{{item.product_size_name}}：{{item.size_name}} / {{item.product_color_name}}：{{item.color_name}}</view>
+        <view class="num-box">
+          <view class="goods-price">￥{{item.sell_price}}</view>
+          <view class="btn-groups">
+            <button class="goods-btn btn-minus" data-index="{{index}}" data-num="{{item.buy_number}}" bindtap="subtraction">—</button>       
+            <input bindinput='input_buy_number' data-index="{{index}}" data-num="{{item.buy_number}}" type='text' class="num" value="{{item.buy_number}}"/>
+            <button class="goods-btn btn-add" data-index="{{index}}" data-num="{{item.buy_number}}" bindtap="addtion">+</button>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="item-height">
+    </view>
+  </view>
+  <view class="cart-fixbar">
+    <view class="allSelect">
+      <icon type="{{allSelect}}" size="26" data-select="{{allSelect}}" bindtap="allSelect"/>
+        <view class="allSelect-text">全选</view>
+      </view>
+      <button bindtap='binddelete' class="delete-list {{dropColor ? 'active': ''}}">删除</button>
+      <view class="count">
+        <text>合计：￥</text>{{count}}
+      </view>
+      <view bindtap='balance' class="order {{dropColor ? 'active': ''}}">结算</view>
+    </view>
+  </view>

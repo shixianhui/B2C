@@ -1,0 +1,33 @@
+/* pages/member/order/order.wxss */
+page{background:#f5f5f5;}
+.navbar{ flex: none; display: flex; background: #fff; padding:0 20rpx;width:100%;box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;margin-bottom:24rpx; position: fixed;border-bottom:1px solid #f5f5f5;}  
+.navbar .item{position: relative; line-height: 80rpx;display:flex;padding:0 10rpx;font-size:28rpx;margin:0 auto;color:#333;}  
+.navbar .item.active{color: #ff4949;} 
+
+.list{float:left;width:100%;margin-top:80rpx;}
+.list .commodity-order{margin-bottom:24rpx;float:left;width:100%;background:#fff;}
+.list .order-header{float:left;width:100%;line-height:80rpx;border-bottom:1px solid #f5f5f5;}
+.list .order-header .order-number{float:left;color:#666;font-size:28rpx;padding-left:30rpx;}
+.list .order-header .type{float:right;color:#ff4949;font-size:28rpx;padding-right:30rpx;}
+.list .order-content .commodity{display:flex;width:100%;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;padding:20rpx 30rpx;}
+.list .order-content .commodity image{width:120rpx;border-radius:8rpx;margin-right:20rpx;}
+.list .order-content .commodity .txt{width:calc(80%);line-height:52rpx;}
+.list .order-content .commodity .txt .tit{font-size:28rpx;color:#333;width:100%;display:flex;}
+.list .order-content .commodity .txt .tit .h4{overflow:hidden;width:calc(100%); text-overflow:ellipsis; white-space:nowrap;display:block;}
+.list .order-content .commodity .txt .tit .price{font-size:28rpx; color:#ff4949;float:right;width:calc(30%);text-align:right;}
+.list .order-content .commodity .txt .style{font-size:24rpx;color:#999;line-height:52rpx;margin-top:16rpx;display: flex;justify-content: space-between;align-items: center;}
+.list .order-content .commodity .txt .style .li .i{padding: 0 10rem;}
+.list .order-content .commodity .txt .style .num{float:right;color:#999;}
+.total{border-bottom:1px solid #f5f5f5;font-size:30rpx;text-align:right;width:100%;line-height:80rpx;color:#333;padding-right:30rpx;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+.total text{color:#ff4949;}
+.list .order-bottom{text-align:center;float:left;width:100%;}
+.list .order-bottom view view{float:right;line-height:60rpx;width:160rpx;color:#666;background:#e6e6e6;font-size:28rpx;margin:24rpx 30rpx 24rpx 0;border-radius:8rpx;}
+.list .order-bottom view.pay{color:#fff;background:#ff4949;}
+.list .order-bottom view.buyagen{color:#fff;background:#ff4949;}
+.list .order-bottom view.pj{color:#fff;background:#ffc125;}
+
+
+
+
+
+

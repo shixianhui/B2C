@@ -1,0 +1,51 @@
+<!--pages/member/order_exchange_input/order_exchange_input.wxml-->
+<view class="container">
+  <form>
+    <view class="input-box">
+      <label>服务类型</label>
+      <input type="text"disabled="false" bindinput="input_mobile" placeholder="请选择服务类型"/>
+      <view class="navigator-arrow"></view>
+    </view>
+    <view class="input-box">
+      <label>退款金额</label>
+      <input type="text" bindinput="input_smscode" placeholder="请输入退款金额"/>
+    </view>
+    <view class="input-box">
+      <label>理由</label>
+      <input type="text" bindinput="input_smscode" placeholder="请输入理由"/>
+    </view>
+    <view class="input-box">
+      <label>详细描述</label>
+      <input type="text" bindinput="input_password" placeholder="请说明情况"/>
+    </view>
+    <view class="pic">
+      <view class="txt">上传凭证<text>(最多上传5张)</text></view>
+      <view class="pic_box">
+        <view class="image">
+          <view><image src="../../../image/addImage.png" mode="scaleToFill" /><icon class="icon-small" type="cancel" size="25" color="#ff4949"></icon></view>
+          <view><image src="../../../image/addImage.png" mode="scaleToFill" /><icon class="icon-small" type="cancel" size="25" color="#ff4949"></icon></view>
+          <view><image src="../../../image/addImage.png" mode="scaleToFill" /><icon class="icon-small" type="cancel" size="25" color="#ff4949"></icon></view>
+          <view><image src="../../../image/addImage.png" mode="scaleToFill" /><icon class="icon-small" type="cancel" size="25" color="#ff4949"></icon></view>
+          <view><image src="../../../image/addImage.png" mode="scaleToFill" /><icon class="icon-small" type="cancel" size="25" color="#ff4949"></icon></view>
+        </view>
+        <image class="addimage" bindtap="showModal" src="../../../image/addImage.png" mode="scaleToFill" />
+      </view>
+    </view>
+    <view class="button-box">
+      <button bindtap="binding">提交申请</button>
+    </view>
+  </form>
+</view>
+<view class="popover" style="display:none;">
+  <view class="backdrop"></view>
+  <view class="popover_content">
+    <view>
+      <text>从相册中选择</text>
+      <text>照片</text>
+    </view>
+    <view class="mt15">
+      <text>取消</text>
+    </view>
+  </view>
+</view>
+

@@ -1,0 +1,76 @@
+<!--pages/member/m_info/m_info.wxml-->
+<view class="container">
+  <form>
+    <view class="input-box">
+      <label>昵称</label>
+      <input type="text" bindinput="input_nickname" placeholder="请输入姓名" value="{{content.nickname}}" />
+    </view>
+    <view class="input-box">
+      <label>绑定手机</label>
+      <view wx:if="{{content.mobile == ''}}">
+        <navigator url="../m_phone/m_phone">立即绑定</navigator>
+      </view>
+        <view wx:else>
+          <view>{{content.mobile}}</view>
+        </view>
+    </view>
+    <view class="input-box">
+      <label>微信号</label>
+      <input type="text"  bindinput="input_weixin_account" placeholder="请输入微信号" value="{{content.weixin_account}}"/>
+    </view>
+    <view class="input-box" style="display:none;">
+      <label>联系电话</label>
+      <input type="text" placeholder="请输入您的联系电话" value="{{content.phone}}"/>
+    </view>
+    <view class="input-box">
+      <label>性别</label>
+      <view>
+        <radio-group class="radio-group" bindchange="radioChange">
+          <view wx:if="{{content.sex == '1'}}">
+            <radio color="#ff4949" value="1" checked="checked"/>男
+            <radio color="#ff4949" value="2"/>女
+          </view>
+          <view wx:else>
+            <radio color="#ff4949" value="1"/>男
+            <radio color="#ff4949" value="2" checked="checked"/>女
+          </view>
+        </radio-group>
+      </view>
+    </view>
+    <view class="input-box">
+      <label>生日</label>
+      <picker mode="date" value="{{date}}" start="1960-09-01" end="2018-12-31" bindchange="bindDateChange">
+        <view class="weui-input">{{date}}</view>
+      </picker>
+    </view>
+    <view class="input-box">
+      <label>所在城市</label>
+      <view bindtap="selectDistrict" class="city">{{areaInfo}}</view>
+    </view>
+    <view class="button-box">
+      <button bindtap="confirmModify">确认修改</button>
+    </view>
+  </form>
+</view>
+<view class="picker-view" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+  <view class="box" animation="{{animationAddressMenu}}">
+    <view class="button-view">
+      <text catchtap="cityCancel">取消</text>
+      <text style="float: right;color:#ff4949;" catchtap="citySure">确定</text>
+    </view>
+    <picker-view bindchange="cityChange" value="{{value}}" wx:key="">
+      <picker-view-column>
+        <view wx:for="{{provinces}}" class="picker-item" wx:key="">
+          {{item.name}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{citys}}" class="picker-item" wx:key="">
+          {{item.name}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{areas}}" class="picker-item" wx:key="">
+          {{item.name}}</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</view>

@@ -1,0 +1,72 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="true" indicator-color="rgba(255,255,255,1)" indicator-active-color="#ff4949" autoplay="true" interval="5000" duration="500" circular="true" style="height:480rpx;">
+        <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">
+          <swiper-item>
+            <image src="{{item.path}}" class="slide-image" mode='widthFix'/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <navigator class='search' url='../classly/search/search'>
+          <view class='placeholder'>
+            <icon class="icon-small" type="search" size="14"></icon>请输入搜索关键字
+          </view>
+    </navigator>
+  </form>
+  <view class="news_swiper">
+    <text class="tit">头条</text>
+    <swiper autoplay="true" interval="5000" duration="500" circular="true" vertical="ture">
+      <block wx:for="{{news_list}}" wx:key="{{news_list}}">
+        <swiper-item>
+          <navigator url="news_view/news_view?item_id={{item.id}}">{{item.title}}</navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+    <navigator class="more_news" url="news_list/news_list">更多</navigator>
+  </view>
+  <block wx:for="{{item_list}}" wx:key="{{item_list}}" wx:for-index="idx">
+  <view class='boutique-recommendation'>
+    <view class='h3'>
+      <text>{{item.title}}</text>
+    </view>
+    <view class="boutique_img">
+      <image src="{{item.ad_list[0].path}}" mode="widthFix"></image>
+    </view>
+    <scroll-view class="scroll-view_H" scroll-x="true">
+      <navigator wx:for="{{item_list[idx].product_list}}" wx:key="{{item_list[idx].product_list}}" data-id="{{item.id}}" url="../classly/view/view?item_id={{item.id}}&title={{item.title}}">
+        <image src='{{item.path}}' lazy-load="true" mode='aspectFill'></image>
+        <text class='tit'>{{item.title}}</text>
+        <text class='price'>¥{{item.sell_price}}</text>
+      </navigator>
+    </scroll-view>
+  </view>
+  <view class="advertisement">
+    <image src="{{item.ad_list[1].path}}" mode="widthFix"></image>
+  </view>
+  </block>
+  <view class='hot-recd'>
+    <view class='h3'>
+      <text>精品推荐</text>
+    </view>
+    <view class="list">
+        <navigator class="li" wx:for="{{list}}" wx:key="" data-id="{{item.id}}" url='../classly/view/view?item_id={{item.id}}&title={{item.title}}'>
+          <view class='img-box'>
+            <image class='img' src='{{item.path}}' mode='widthFix' lazy-load="true"></image>
+          </view>  
+          <text class='tit'>{{item.title}}</text>
+          <text class='price'>¥{{item.sell_price}}</text>
+        </navigator>
+    </view>
+    <view class="body-view">
+        <loading hidden="{{hidden}}">
+            加载中...
+        </loading>
+    </view>
+  </view>
+</view>

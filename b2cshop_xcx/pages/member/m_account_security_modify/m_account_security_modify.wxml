@@ -1,0 +1,17 @@
+<!--pages/member/m_account_security_modify /m_account_security_modify.wxml-->
+<view class="container">
+  <view class='form'>
+    <view class="input-box">
+      <label>设置密码</label>
+      <input type="number" maxlength="6" bindinput="input_newPwd" placeholder="请设置密码"/>
+    </view>
+    <view class="input-box">
+      <label>确认密码</label>
+      <input type="number" maxlength="6" bindinput="input_conPwd" placeholder="请确认密码"/>
+    </view>
+    <view class="button-box">
+      <button bindtap="modifPayPwd">提交</button>
+    </view>
+  </view>
+  <view class='tip'>注:默认支付密码123456</view>
+</view>

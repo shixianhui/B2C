@@ -1,0 +1,27 @@
+page{background:#f5f5f5}
+.order-number{margin-top:20rpx;width:100%;color:#333;font-size:30rpx;background:#fff;padding:0 20rpx;line-height:80rpx;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;display:flex;flex-direction:row;justify-content:space-between;border-bottom:1px solid #f5f5f5}
+.order-number text{width:calc(30%);float:left}
+.order-number .number{float:right;width:calc(100%);font-size:28rpx;text-align:right;color:#666}
+.payment-amount{margin-bottom:20rpx;width:100%;color:#333;font-size:30rpx;background:#fff;padding:0 20rpx;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;line-height:80rpx}
+.payment-amount .price{color:#ff4949;font-size:28rpx;float:right}
+.payment-method{background:#fff;width:100%}
+.payment-method .navigator{padding:20rpx 30rpx;border-bottom:1px solid #f5f5f5;width:100%;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
+.navigator::before{border:none}
+.payment-method image{width:120rpx;border-radius:8rpx}
+.payment-method .info{margin-left:20rpx;width:calc(100%)}
+.payment-method .info .title{font-size:30rpx;color:#333;margin-bottom:10rpx}
+.payment-method .info .prompt{color:#666;font-size:26rpx}
+.payment-method .info .prompt text{color:#ff4949}
+.navigator-arrow{right:-24rpx}
+modal{border-radius:100rpx}
+.input{position:fixed;z-index:99;background:#fff;width:90%;top:20%;margin-left:5%;border-radius:16rpx}
+.itemStyle{width:80rpx;height:80rpx;background:#f2f2f2;border-radius:6rpx;border:1rpx solid #dadada;margin-left:10rpx;overflow:hidden;position:relative}
+.pas_input{border:0;color:#fff;font-size:24rpx;height:80rpx;opacity:0;overflow:hidden;position:absolute;z-index:8;width:100%;left:-100rpx}
+.pwdInputStyle{height:160rpx;display:flex;align-items:center;justify-content:center}
+.PwdStyle{width:20rpx;height:20rpx;background:black;border-radius:10rpx;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%)}
+.close{width:100%;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;padding:0 15px;line-height:40px;border-bottom:1px solid #f5f5f5}
+.close icon{float:right;padding:7px;height:25px;width:25px}
+.pwd_forget{padding:0px 15px 10px;float:left;width:100%;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
+.pwd_forget .btn{float:right;color:#999;font-size:14px}
+.tips{padding:10rpx 20rpx}
+.tips .h5{font-size:26rpx;color:#888}

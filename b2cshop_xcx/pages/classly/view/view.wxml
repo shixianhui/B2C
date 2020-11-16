@@ -1,0 +1,135 @@
+<!--pages/classly/view/view.wxml-->
+<view class="container">
+  <!-- 轮播图 -->
+  <view class="page-body">
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="true" indicator-color="rgba(255,255,255,1)" indicator-active-color="#ff4949" autoplay="true" interval="5000" duration="500" circular="true" style="height:600rpx;">
+        <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">
+          <swiper-item>
+            <image bindtap="fnPreviewImg" data-index="{{item.path}}" src="{{item.path}}" class="slide-image" mode='widthFix'/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <!-- 标题 -->
+  <view class="title">
+    <view class="price">
+      <view class='money'>
+        <text class='i'>￥</text>
+        <text>{{content.sell_price}}</text>
+      </view>
+      <view class="old-price">价格￥<text class='i'>{{content.market_price}}</text></view>
+    </view>
+    <view class="txt">{{content.title}}</view>
+    <view class="h6">
+      <view class='span'>快递：0.00</view>
+      <view class='span'>销量：{{content.sales}}</view>
+      <!-- <view class='span'>浙江杭州</view> -->
+    </view>
+  </view>
+
+  <view class="spec-box" bindtap="fnOpenSpec" data-open="1">
+    <text class='text1'>已选</text>
+    <text class='text2'>{{product_size_name}}:{{choose_size}}</text>
+    <text class='text2'> / {{product_color_name}}: {{choose_color}}</text>
+    <text class='text2'> / 数量: {{buy_number}}</text>
+    <view>
+      <icon></icon>
+      <icon></icon>
+      <icon></icon>
+    </view>
+  </view>
+
+  <!-- 规格弹窗 -->
+  <view class="spec-mb {{mb == '1'?'active':''}}">
+    <view class='black {{close}}' bindtap='fnOpenSpec' data-open="0"></view>
+    <view class='dc-content'>
+      <view class='top-box'>
+        <image class='img' mode='widthFix' src='{{img_color}}'></image>
+        <view class='txt-box'>
+          <view class='h4'>{{content.title}}</view>
+          <view class="h5">
+            <text class="money">￥{{price}}</text>
+            <text class='i'>(快递：0.00)</text>
+          </view>
+        </view>
+      </view>
+      <view class="bottom-box">
+        <view class='cm-box'>
+          <view class="tit">{{product_size_name}}</view>
+          <view class='ul'>
+            <view wx:for="{{size_list}}" wx:key="{{item}}" class="li {{size_num == item.size_id?'active':''}}" bindtap='fnSizeTap' data-size_id='{{item.size_id}}'>{{item.size_name}}</view>
+          </view>
+        </view>
+        <view class='color-box'>
+          <view class="tit">{{product_color_name}}</view>
+          <view class='ul'>
+            <view wx:for="{{color_list}}" wx:key="{{item}}" class="li {{color_num == item.color_id?'active':''}}" bindtap='fnColorTap' data-color_id='{{item.color_id}}'>{{item.color_name}}</view>
+          </view>
+        </view>
+        <view class='num-box'>
+          <view class="tit">数量（库存:{{stock}}）</view>
+          <view class='sub-add-box'>
+            <view class='bnts' data-num="{{buy_number}}" bindtap="subtraction">-</view>
+            <input class="nums" maxlength="2" bindblur='bindblur' data-num="{{buy_number}}" type='text' value="{{buy_number}}"/>
+            <view class='bnts' data-num="{{buy_number}}" bindtap="addtion">+</view>
+          </view>
+        </view>
+      </view>
+      <view class="btn-box {{price != 0 && color_num != 0 && size_num != 0?'active':''}} {{color_size_open == 0 ?'active':''}}" bindtap='fnEndBuy'>
+        <text>确定</text>
+      </view>
+    </view>
+  </view>
+  <!-- 评价 -->
+  <view class="evaluate">
+    <navigator url="../view_pj/view_pj?product_id={{item_id}}" class="more">
+      评价({{comment_count}})
+      <view class="navigator-arrow"></view>
+    </navigator>
+    <block wx:if="{{comment_list.length > 0}}">
+      <view wx:for="{{comment_list}}" wx:key="" class="list">
+        <view class="user">
+          <image src="{{item.user_path_thumb}}" mode="aspectFill"></image>
+          <text class="name">{{item.username}}</text>
+          <text class="time">{{item.add_time}}</text>
+        </view>
+        <view class="txt">
+          <text>{{item.content}}</text>
+          <view class="pic-box">
+            <image wx:for="{{item.attachment_list}}" wx:key="" src="{{item.path_thumb}}" mode="aspectFill"></image>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="list">
+        <view class="txt">
+          <text>宝贝暂无评论</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="details">
+    <view class="txt">图文详情</view>
+    <wxparser rich-text="{{contents}}" />
+  </view>
+  <view class="bottom">
+    <view wx:if="{{is_favorite == 0}}" bindtap="fnAddFavorite" class="collection">
+      <image class="image1" src="../../../image/icon_shoucang.png" mode="widthFix"></image>
+      <text>收藏</text>
+    </view>
+    <view wx:if="{{is_favorite == 1}}" bindtap="fnDelFavorite" class="collection2">
+      <image class="image2" src="../../../image/icon_shoucang2.png" mode="widthFix"></image>
+      <text>已收藏</text>
+    </view>
+    <navigator class="cart" open-type="switchTab" url="../../cart/cart">
+      <image src="../../../image/icon_cart.png" mode="widthFix"></image>
+      <text>购物车</text>
+    </navigator>
+    <view class="join" bindtap="bindtocart">加入购物车</view>
+    <view class="buy" bindtap="newBuy">立即购买</view>
+  </view>
+</view>
+

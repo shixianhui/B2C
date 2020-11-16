@@ -1,0 +1,15 @@
+<!--pages/member/m_message/m_message.wxml-->
+<view class="container">
+  <view class="list">
+    <view wx:for="{{list}}" wx:key="{{list}}">
+      <text class='time'>{{item.add_time_format}}</text>
+      <text class='txt'>{{item.content}}</text>
+    </view>
+  </view>
+  <view class="body-view">
+    <loading hidden="{{hidden}}">
+        加载中...
+    </loading>
+  </view>
+</view>
+

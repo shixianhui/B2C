@@ -1,0 +1,50 @@
+<!--pages/member/order_exchange_product/order_exchange_product.wxml-->
+<view class="container">
+  <view class="header">
+    <text>{{content.status_format}}</text>
+    <image wx:if="{{content.status == '2'}}" src="../../../image/img_daishouhuo2.png" mode="aspectFit"></image>
+    <image wx:if="{{content.status == '1'}}" src="../../../image/img_daifahuo2.png" mode="aspectFit"></image>
+    <image wx:if="{{content.status == '0'}}" src="../../../image/img_daifukuang2.png" mode="aspectFit"></image>
+    <image wx:if="{{content.status == '3'}}" src="../../../image/icon_money.png" mode="aspectFit"></image>
+  </view>
+  <view wx:for="{{content.orderdetailList}}" wx:key="" wx:for-item="product" class="commodity">
+    <image src="{{product.path_thumb}}" mode="widthFix"></image>
+    <view class="txt">
+      <view class="tit"><text class='h4'>{{product.product_title}}</text><text class="price">￥50.00</text></view>
+      <view class="style"><view wx:if="{{product.color_name}}">{{product.product_color_name}}：{{product.color_name}}</view>   <view wx:if="{{product.size}}">{{product.product_size_name}}：{{product.size}}</view><text class="num">x{{product.buy_number}}</text></view>
+    </view>
+  </view>
+  <view class="order-info">
+    <view>
+      订单编号：<text>{{content.order_number}}</text>
+    </view>
+    <view>
+      商品小计：<text>￥{{content.product_total}}</text>
+    </view>
+    <view>
+      运费：<text>￥{{content.postage_price}}</text>
+    </view>
+    <view>
+      实付款(含运费)：<text class="total">￥{{content.total}}</text>
+    </view>
+  </view>
+  <view class="bottom">
+    <view wx:if="{{content.status == '0'}}">
+      <view bindtap="pay" wx:key="" class="pay">付款</view>
+      <view bindtap="cancel" data-info="{{content.id}}">取消订单</view>
+    </view>
+    <view wx:elif="{{content.status == '1'}}">
+      <view class="pay" bindtap="remindGoods" data-info="{{content.id}}">提醒发货</view>
+    </view>
+    <view wx:elif="{{content.status == '2'}}">
+      <view class="pay" bindtap="confirmGoods" data-info="{{content.id}}">确认发货</view>
+    </view>
+    <view wx:elif="{{content.status == '3'}}">
+      <view wx:if="{{content.is_comment_to_seller == '0'}}" class="pj" bindtap="evaluate" data-info="{{content.id}}">评价</view>
+      <view class="buyagen" bindtap="againBuy" data-info="{{content.id}}">再次购买</view>
+    </view>
+    <view wx:elif="{{content.status == '4'}}">
+      <view class="buyagen" bindtap="againBuy" data-info="{{content.id}}">再次购买</view>
+    </view>
+  </view>
+</view>

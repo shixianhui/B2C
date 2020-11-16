@@ -1,0 +1,12 @@
+<!--pages/member/m_invitation_bundling/m_invitation_bundling.wxml-->
+<view class="container">
+  <form>
+    <view class='input-box'>
+      <label>邀请码</label>
+      <input type="text" bindinput="bindInput" placeholder="请输入邀请码"/>
+    </view>
+    <view class='button-box'>
+      <button bindtap="binding">绑定</button>
+    </view>
+  </form>
+</view>

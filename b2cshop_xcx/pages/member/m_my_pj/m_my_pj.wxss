@@ -1,0 +1,16 @@
+/* pages/member/m_my_pj/m_my_pj.wxss */
+page{background:#f5f5f5;}
+.container{background:#f5f5f5;}
+.list{margin-bottom:30rpx;width:100%;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;padding:20rpx;background:#fff;}
+.list navigator{background:#f5f5f5;display:flex;padding:10rpx 20rpx;}
+.list navigator image{width:100rpx;}
+.list navigator .txt{width:calc(100% - 100rpx);}
+.list navigator .txt text{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:50rpx;font-size:28rpx;}
+.list .input{padding-top:20rpx;}
+.list .input .type text{font-size:28rpx;color:#666;}
+.list .input .type text:first-of-type{margin-right:30rpx;}
+.list .input .star-box{display:flex;height:64rpx;padding:20rpx 0;}
+.list .input .star-box text{font-size:28rpx;width:120rpx;line-height:64rpx;}
+.list .input .star-box image{width:64rpx;height:64rpx;}
+.list .input .text{font-size:28rpx;color:#666;}
+.list .input .picture image{display:inline-block;width:16vw;height:16vw;margin:2vw 1vw 0;}

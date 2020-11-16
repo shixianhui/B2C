@@ -1,0 +1,15 @@
+/* pages/member/friends/friends.wxss */
+.main{background-color: #F5F5F5;width: 100%;height: 100vh;}
+.rmb{display: flex;justify-content: space-around; width: 100%;text-align: center;background-color: #fff;border-top: 1px solid #E6E6E6;box-sizing: border-box;padding: 30rpx 0;}
+.rmb-box{display: flex;}
+.rmb-box .l{padding-right: 120rpx;border-right: 1px solid #CCCCCC;}
+.rmb-box .r{padding-left: 120rpx;}
+.rmb-box .h3{font-size: 30rpx;color: #4D4D4D;}
+.rmb-box .h3.active{color: #F2634D;}
+.ul{display: none;}
+.ul.active{display: block;}
+.li{display: flex;justify-content: space-between;align-items: center;padding:20rpx 46rpx;margin-top: 20rpx;background-color: #fff;}
+.li .l-box{display: flex;align-items: center;}
+.li .img{width: 75rpx;height: 75rpx;border-radius:50%;margin-right: 20rpx;}
+.li .txt .h5{font-size: 24rpx;color: #4D4D4D;}
+.li .join-icon {font-size: 24rpx;color: #999999;}

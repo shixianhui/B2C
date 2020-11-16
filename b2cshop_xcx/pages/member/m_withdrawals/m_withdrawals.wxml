@@ -1,0 +1,20 @@
+<!--pages/member/m_withdrawals/m_withdrawals.wxml-->
+<view class="container">
+  <view class="box">
+    <view class="tit">
+      <view class="txt"> 
+        可用余额(元)<text>2小时内到账</text>
+      </view>
+      <form>
+        <text>提现金额</text>
+        <view class="input-box">
+          <text>￥</text><input value=""></input>
+        </view>
+        <text class="price">可用金额 0.00元</text>
+      </form>
+    </view>
+    <view class="button-box">
+      <button>确认提现</button>
+    </view>
+  </view>
+</view>

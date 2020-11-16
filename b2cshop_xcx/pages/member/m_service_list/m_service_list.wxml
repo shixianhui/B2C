@@ -1,0 +1,13 @@
+<!--pages/member/m_service_list/m_service_list.wxml-->
+<view class="container">
+  <view>
+    <view class="list">
+    <block wx:for="{{list}}" wx:key="{{list}}">
+      <navigator url="../m_service_view/m_service_view?item_id={{item.id}}" class="txt" data-id="{{item.id}}">
+        <text>{{item.title}}</text>
+        <view class="navigator-arrow"></view>
+      </navigator>
+    </block>
+    </view>
+  </view>
+</view>

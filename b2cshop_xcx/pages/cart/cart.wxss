@@ -1,0 +1,27 @@
+.main{width: 100%;min-height: 100vh;background-color: #f5f5f5;}
+.cart-box{background:#fff;width:100%;margin-top:20rpx}
+.cart-box .item{display:flex;justify-content: space-between; align-items:center;padding:20rpx;border-bottom:1px solid #f5f5f5;}
+.cart-box .item .goods-info{width: 460rpx;}
+.cart-box .item-height{width: 100%;height: 99rpx;background-color: #f5f5f5;}
+.cart-box .img-box{width: 160rpx;height:160rpx;overflow: hidden;display: flex;}
+.cart-box .goods-img{width: 100%;height:100%;border-radius:10rpx;display: block;}
+.cart-box .row{color:#333;display:flex;flex-direction:row;width:calc(100%);justify-content:space-between;margin-bottom:20rpx}
+.cart-box .goods-name{font-size:32rpx;width:calc(100%);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cart-box .goods-price{font-size:32rpx;float:left;color:#ff4949;width:calc(100% - 100rpx);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cart-box .goods-type{color:#999;font-size:24rpx;}
+.cart-box .num-box{display:flex;flex-direction:row;justify-content:flex-end;padding-top: 20rpx;}
+.cart-box .goods-btn{width:60rpx;height:60rpx;padding:0;line-height:60rpx;font-weight:bold;color:#999;margin:0;background:#fff;margin-top:-16rpx}
+.cart-box .num{color:#999;width:60rpx;text-align:center;line-height:60rpx;font-size:24rpx;margin-top:-16rpx;height:60rpx}
+.cart-box .btn-add{font-size:50rpx}
+.cart-box .btn-minus{font-size:28rpx}
+.cart-box .btn-groups{display:flex;flex-direction:row;justify-content:flex-end;border-radius:10rpx}
+.cart-fixbar{position:fixed;bottom:0;height:100rpx;width:100%;padding:0 20rpx;display:flex;flex-direction:row;align-items:center;border-top:1px solid #f5f5f5;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;background:#fff;z-index:99}
+.cart-fixbar .allSelect{display:flex;flex-direction:row;height:100rpx;align-items:center;color:#333;font-size:28rpx}
+.cart-fixbar .allSelect-text{margin-left:20rpx}
+.cart-fixbar .count{position:absolute;right:150rpx;color:#333;font-size:30rpx}
+.cart-fixbar .order{color:#fff;height:100rpx;line-height:100rpx;position:absolute;right:0px;padding:0 20rpx;font-size:32rpx;width:100rpx;text-align:center;background: #e5e5e5;}
+.cart-fixbar .order.active{background:#ff4949}
+.cart-fixbar .delete-list{color:#fff;height:60rpx;line-height:60rpx;position:absolute;left:160rpx;padding:0px;font-size:26rpx;width:80rpx;text-align:center;background:#e5e5e5}
+.cart-fixbar .delete-list.active{background-color: #ff4949;}
+.wx-icon-success{color:#ff4949}
+.cart-fixbar .allnum{font-size:24rpx}

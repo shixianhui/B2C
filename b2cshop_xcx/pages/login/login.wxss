@@ -1,0 +1,8 @@
+/* pages/login/login.wxss */
+.main{width: 100%;min-height: 100vh;display: flex;}
+.center{margin: 300rpx auto;width: 100%;}
+.logo .img{width: 40%;margin: 0rpx auto 160rpx;display: block;}
+.login-btn{width: 90%;padding: 0rpx;box-sizing: border-box;background-color: #fff;border-color: #fff;margin: 0 auto;}
+.login-btn::after {border: none;}
+.login-btn .view{width: 100%;text-align: center;color: #fff;font-size:34rpx;line-height: 90rpx;background: #cc0011;border-radius: 4px}
+.btn-hover{position: relative;top: 3rpx;box-shadow:0px 0px 8px #999 inset;}

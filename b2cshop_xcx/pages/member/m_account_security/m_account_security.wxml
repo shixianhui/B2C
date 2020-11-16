@@ -1,0 +1,19 @@
+<!--pages/member/m_account_security/m_account_security.wxml-->
+<view class="container">
+  <view>
+    <view class="list">
+      <view class="txt">
+        <text>昵称</text>
+        <text class="fr">{{userInfo.nickname}}</text>
+      </view>
+      <navigator style="display:none;" url="../m_account_security_modify/m_account_security_modify" class="txt">
+        <text>修改登陆密码</text>
+        <view class="navigator-arrow"></view>
+      </navigator>
+      <navigator url="../m_account_security_modify/m_account_security_modify" class="txt">
+        <text>修改支付密码</text>
+        <view class="navigator-arrow"></view>
+      </navigator>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+/* pages/member/m_price/m_price.wxss */
+page{background:#f5f5f5;}
+.tit{width:100%;background:#fff;padding:15px;box-sizing:border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;}
+.tit navigator{float: right;}
+.tit navigator text{float:left;font-size:12px;margin-right:12px;color:#666}
+.tit navigator view.navigator-arrow{position:absolute;right:0;top:50%;padding-right:0}
+.tit navigator.navigator-hover{background:#fff;}
+.tit .txt{width:100%;float:left;text-align:center;font-size:15px;color:#666;margin:10px 0;}
+.tit .txt .price{font-size:40px;color:#ff4949;margin:5px 0;}
+.button-box{margin:25px 0 0;float:left;width:100%;padding:0 15px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing: border-box;}
+.button-box navigator{font-size:16px;background:#ff4949;color:#fff;text-align:center;border-radius:4px;line-height:44px;height:44px;}

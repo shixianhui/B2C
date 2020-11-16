@@ -1,0 +1,35 @@
+<!--pages/classly/classly.wxml-->
+<view class="container">  
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <navigator class='search' url="search/search">
+          <view class='placeholder'>
+            <icon class="icon-small" type="search" size="14"></icon>请输入搜索关键字
+          </view>
+    </navigator>
+  </form>
+  <view>
+    <scroll-view scroll-y="true" class="nav_left">  
+      <block wx:for="{{classly}}" wx:key="{{classly}}">  
+        <view class="nav_left_items {{curNav == item.id ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.id}}">{{item.product_category_name}}</view> 
+      </block>  
+    </scroll-view> 
+    <scroll-view  scroll-y="true" class="nav_right">
+      <view class="ul">
+        <block wx:for="{{list}}" wx:key="">
+          <view class="nav_right_items">
+          <!--界面跳转 -->
+            <navigator url="view/view?item_id={{item.id}}&title={{item.title}}">
+              <view class="img-box">
+                <image src="{{item.path_thumb}}"></image>
+              </view>
+              <view class='txt-box'>
+                <view class='tit-h6'>{{item.title}}</view>
+                <view class='sell_price'>￥<text class='i'>{{item.sell_price}}</text></view>
+              </view>
+            </navigator>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+ </view> 

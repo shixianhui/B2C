@@ -1,0 +1,57 @@
+<!--pages/classly/product/product.wxml-->
+<view class="container">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <navigator class='search' url="../search/search">
+      <view class='placeholder'>
+        <icon class="icon-small" type="search" size="14"></icon>{{searchName}}
+      </view>
+    </navigator>
+  </form>
+  <view class='nav'>
+    <view bindtap='synthesis' class="show-btn {{chooselist == 1 ? 'active' : ''}}">综合</view>
+    <view bindtap='sales' class="show-btn {{chooselist == 2 ? 'active' : ''}}">
+      销量
+      <view class="sort">
+        <view class="top_sort {{saleSort == 1 ? 'active' : ''}}"></view>
+        <view class="bottom_sort {{saleSort == 2 ? 'active' : ''}}"></view>
+      </view>
+    </view>
+    <view bindtap='sellPrice' class="show-btn {{chooselist == 3 ? 'active' : ''}}">
+      价格
+      <view class="sort">
+        <view class="top_sort {{priceSort == 1 ? 'active' : ''}}"></view>
+        <view class="bottom_sort {{priceSort == 2 ? 'active' : ''}}"></view>
+      </view>
+    </view>
+    <view bindtap='popovershow' class='show-btn'>筛选<image src='../../../image/icon1.png' lazy-load="true" mode='widthFix'></image></view> 
+    <view class="popover {{ckecklistshow==true ? 'active' : ''}}">
+      <view bindtap="hideModal" class="backdrop"></view>
+      <view class="popover_content">
+        <block  wx:for="{{ckecklist}}" wx:for-index='idx' wx:key="">
+        <text wx:for="{{item.sub_list}}" wx:for-index='idxs' data-id="{{item.id}}"  data-first-index="{{idx}}" data-second-index="{{idxs}}" class="{{firstIndex==idx&&secondIndex==idxs ? 'active' : ''}}" wx:key="" bindtap="ckecklistTap">{{item.brand_name}}</text>
+        </block>
+      </view>
+      <form>
+        <button bindtap='submit' form-type='submit'>确定</button>
+        <button bindtap='reset' form-type='reset'>重置</button>
+      </form>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" class="hot-recommendation" bindscrolltolower="bindDownLoad">
+  <!-- bindscrolltoupper="refresh" -->
+    <view class="list">
+      <navigator wx:for="{{list}}" wx:key="{{list}}" data-id="{{item.id}}" url='../view/view?item_id={{item.id}}'>
+        <view>
+          <image src="{{item.path_thumb}}" lazy-load="true" mode='aspectFill' style='height:{{listimage_height}}px;'></image>
+          <text class='tit'>{{item.title}}</text>
+          <text class='price'>¥{{item.sell_price}}</text>
+        </view>
+      </navigator>
+    </view>
+  </scroll-view>
+  <view class="body-view">
+    <loading hidden="{{hidden}}">
+        加载中...
+    </loading>
+  </view>
+</view>

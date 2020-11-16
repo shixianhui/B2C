@@ -1,0 +1,26 @@
+<!--pages/classly/view_pj/view_pj.wxml-->
+<view class="container">
+  <view class="list_box">
+    <view wx:for="{{list}}" wx:key="" wx:for-index="idx" class="list">
+        <view class="user">
+          <image src="{{item.user_path_thumb}}" mode="aspectFill"></image>
+          <text class="name">{{item.username}}</text>
+          <text class="time">{{item.add_time}}</text>
+        </view>
+        <view class="star-box">
+          <text>评分：</text>
+          <image wx:for="{{stars}}" wx:key="" src="{{list[idx].grade > item ? fullSrc : freeSrc}}" class="satr" mode="widthFix"></image>
+        </view>
+        <view class="txt">
+          <text>{{item.content}}</text>
+          <view class="pic-box">
+            <image wx:for="{{item.attachment_list}}" wx:key="" src="{{item.path_thumb}}" mode="aspectFill"></image>
+          </view>
+          <!-- <navigator class="record-num">
+            <image src="../../../image/icon_xinxi.png" mode="widthFix"></image>
+            <text>0</text>
+          </navigator> -->
+        </view>
+      </view>
+    </view>
+</view>

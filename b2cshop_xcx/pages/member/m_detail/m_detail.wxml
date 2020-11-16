@@ -1,0 +1,32 @@
+<!--pages/member/m_detail/m_detail.wxml-->
+<view class="container">
+  <view class='menu-box'>
+    <view bindtap='fnmenu' id='0' class="li {{menu_box_flag == '0'?'active':''}}">推广明细</view>
+    <view bindtap='fnmenu' id='1'class="li {{menu_box_flag == '1'?'active':''}}">消费明细</view>
+  </view>
+  <swiper class='swiper' current="{{menu_box_flag}}" bindchange="fnMenu2" duration="300">
+    <swiper-item>
+      <scroll-view class='scroll-view' scroll-y="true" bindscrolltolower="bindDownLoad1">
+        <view class='list'>
+          <view wx:for="{{tg_list}}" wx:key="" class='box'>
+            <text class="title">{{item.type_format}}</text>
+            <text class="time">{{item.add_time_format}} [{{item.is_level}}]</text>
+            <text class="price grey">￥{{item.score}}</text>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view class='scroll-view' scroll-y="true" bindscrolltolower="bindDownLoad2">
+        <view class="list">
+          <view wx:for="{{list}}"  wx:key="" class="box">
+            <text class="title">{{item.type_format}}</text>
+            <text class="time">{{item.add_time_format}}</text>
+            <text class="price grey">￥{{item.price}}</text>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>
+

@@ -1,0 +1,11 @@
+<!--pages/login/login.wxml-->
+<view class='main'>
+  <view class='center'>
+  <view class='logo'>
+    <image class='img' mode='widthFix' src='/image/logo.png'></image>
+  </view>
+  <button class='login-btn' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo='fnLogin' hover-class='btn-hover'>
+    <view class='view' hover-class='btn-hover'>微信登陆</view>
+  </button>
+  </view>
+</view>

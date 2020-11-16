@@ -1,0 +1,26 @@
+<!--pages/member/m-collection/m-Collection.wxml-->
+<view class="container">
+  <view class="list">
+    <view wx:for="{{list}}" wx:key="{{list}}" style='margin-left:{{marginleft}}'>
+      <icon type="{{item.select}}" size="26" data-index="{{index}}" data-select="{{item.select}}" bindtap="change"/>
+      <navigator url="../../classly/view/view?item_id={{item.product_id}}&title={{item.title}}">
+        <image src="{{item.path_thumb}}" mode="aspectFit"></image>
+        <view class="good-info">
+          <text class="title">{{item.title}}</text>
+          <text class="price">￥{{item.sell_price}}</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class="bottom">
+    <view wx:if="{{flag}}">
+      <view class="allSelect">
+        <icon type="{{allSelect}}" size="26" data-select="{{allSelect}}" bindtap="allSelect"/>
+        <view class="allSelect-text">全选</view>
+      </view>
+      <button bindtap='bindhide' class='button'>取消</button>
+      <button bindtap='binddelete' class='button'>删除</button>
+    </view>
+    <button wx:else bindtap="bindshow" class="button">编辑</button>
+  </view>
+</view>

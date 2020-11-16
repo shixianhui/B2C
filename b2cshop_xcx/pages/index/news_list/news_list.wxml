@@ -1,0 +1,13 @@
+<!--pages/index/news_list/news_list.wxml-->
+<view class="container">
+  <view>
+    <view class="list">
+    <block wx:for="{{news_list}}" wx:key="{{news_list}}">
+      <navigator url="../news_view/news_view?item_id={{item.id}}" class="txt" data-id="{{item.id}}">
+        <text>{{item.title}}</text>
+        <view class="navigator-arrow"></view>
+      </navigator>
+    </block>
+    </view>
+  </view>
+</view>

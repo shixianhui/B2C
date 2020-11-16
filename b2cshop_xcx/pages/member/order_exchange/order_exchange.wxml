@@ -1,0 +1,49 @@
+<!--pages/member/order_exchange /order_exchange.wxml-->
+<view class="container">
+  <view class="navbar page-section-spacing">
+    <text wx:for="{{navbar}}" data-idx="{{index}}" data-value="{{item.value}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item.name}}</text>
+  </view> 
+  <view class="list">
+    <view wx:for="{{list}}" wx:key="" data-id="{{item.id}}"  class="commodity-order">
+      <view class="order-header">
+        <text class="order-number">订单号：{{item.order_number}}</text>
+        <text class="type">{{item.status_format}}</text>
+      </view>
+      <view bindtap="orderView" wx:for="{{item.orderdetailList}}" wx:key="" wx:for-item="product" class="order-content" data-info="{{item}}">
+        <view class="commodity">
+          <image src="{{product.path_thumb}}" mode="widthFix"></image>
+          <view class="txt">
+            <view class="tit"><text class='h4'>{{product.product_title}}</text><text class="price">￥{{product.buy_price}}</text></view>
+            <view class="style"><view wx:if="{{product.color_name}}">{{product.product_color_name}}：{{product.color_name}}</view>   <view wx:if="{{product.size}}">{{product.product_size_name}}：{{product.size}}</view><text class="num">x{{product.buy_number}}</text></view>
+          </view>
+        </view>
+      </view>
+      <view class="total">
+        <text>退款金额：￥{{item.price}}</text>
+      </view>
+      <view class="order-bottom">
+        <view wx:if="{{item.exchange_type == 1}}">
+          <block wx:if="{{item.status == 0}}">
+          
+          </block>
+          <view bindtap="pay" class="pay">待审核</view>
+          <view bindtap="cancel" data-info="{{item.id}}">再次申请</view>
+        </view>
+        <view wx:elif="{{item.status == '1'}}">
+          <view class="pay" bindtap="remindGoods" data-info="{{item.id}}">等待换货</view>
+        </view>
+        <view wx:elif="{{item.status == '2'}}">
+          <view class="pay" bindtap="confirmGoods" data-info="{{item.id}}">换货成功</view>
+        </view>
+        <view wx:elif="{{item.status == '3'}}">
+          <view wx:if="{{item.is_comment_to_seller == '0'}}" class="pj" bindtap="evaluates" data-info="{{item.id}}">去退货</view>
+          <view class="buyagen" bindtap="againBuy" data-info="{{item.id}}">已退款</view>
+        </view>
+        <view wx:elif="{{item.status == '4'}}">
+          <view class="buyagen" bindtap="againBuy" data-info="{{item.id}}">等待退款</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+

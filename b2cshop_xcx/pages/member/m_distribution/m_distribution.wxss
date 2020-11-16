@@ -1,0 +1,13 @@
+/* pages/member/m-distribution/m-distribution.wxss */
+page{background:#f5f5f5;}
+.m_funds{background:#ff4949;display:flex;padding:10px 0;width:100%;}
+.m_funds view{color:#fff;text-align:center;font-size:14px;width:100%;}
+.m_funds view text{display:block}
+.m_funds view text.price{font-size:16px;font-weight:bold;}
+.erweima_img{background:#fff;width:80%;margin:5vw 10vw;}
+.erweima_img .person{display:flex;border-bottom:1px solid #f5f5f5;padding:10px 0;}
+.erweima_img .person .img{width:60px;height:60px;margin-left:15px;margin-right:10px;border-radius:50%;}
+.erweima_img .person .name{display:block;font-size:15px;color:#666;line-height:30px;}
+.erweima_img .erweima image{width:90%;margin:10px 5% 10px;}
+.erweima_img .erweima text{display:block;text-align:center;font-size:15px;margin-top:20px;margin-bottom:20px;}
+.erweima_img .erweima .btn{background-color: #ff4949;color: #fff;font-size: 30rpx;margin-top: 20rpx;}

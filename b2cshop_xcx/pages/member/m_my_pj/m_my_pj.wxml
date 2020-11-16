@@ -1,0 +1,32 @@
+<!--pages/member/m_my_pj/m_my_pj.wxml-->
+<view class="container">
+  <scroll-view>
+    <view wx:for="{{list}}" wx:key="" wx:for-index="idx" class="list">
+      <navigator url='../../classly/view/view?item_id={{item.product_id}}&title={{item.product_title}}'>
+        <image src="{{item.path_thumb}}" mode="widthFix" ></image>
+        <view class="txt">
+          <text>{{item.product_title}}</text>
+          <text class="price">￥{{item.sell_price}}</text>
+        </view>
+      </navigator>
+      <view class="input">
+        <view class="type">
+          <text>{{item.add_time_format}}</text><text>{{item.nickname}}</text>
+        </view>
+        <view class="star-box">
+          <text>评分：</text>
+          <image wx:for="{{stars}}" wx:key="" src="{{list[idx].grade > item ? fullSrc : freeSrc}}" class="satr" mode="widthFix"></image>
+        </view>
+        <view class="text">{{item.content}}</view>
+        <view class="picture">
+          <image bindtap="previewImage" data-index="idx" wx:for="{{item.attachment_list}}" wx:key="" src="{{item.path_thumb}}" class="satr" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="body-view">
+    <loading hidden="{{hidden}}">
+        加载中...
+    </loading>
+  </view>
+</view>

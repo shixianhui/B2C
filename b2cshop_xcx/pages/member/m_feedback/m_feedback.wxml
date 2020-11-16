@@ -1,0 +1,9 @@
+<!--pages/member/m_feedback/m_feedback.wxml-->
+<view class="container">
+  <form>
+    <textarea bindinput="input_content" placeholder="反馈内容"></textarea>
+  </form>
+  <view class="button-box">
+    <button bindtap="addFeedbook">反 馈</button>
+  </view>
+</view>

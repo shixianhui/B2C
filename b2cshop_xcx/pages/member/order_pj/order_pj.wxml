@@ -1,0 +1,43 @@
+<!--pages/member/order_pj/order_pj.wxml-->
+<view class="container">
+  <view>
+    <view wx:for="{{list}}" wx:key="" wx:for-index='idx' data-id="{{item.id}}" class="pj_list">
+      <view class="star">
+        <view class="product_image">
+          <image src="{{item.path_thumb}}" mode="aspectFit" />
+        </view>
+        <text>评分：</text>
+        <view wx:for="{{stars}}" wx:key="">
+          <image src="{{key[idx] > item ? fullSrc : freeSrc}}" data-index="{{idx}}" bindtap="selectStar" data-key="{{item+1}}" />
+        </view>
+      </view>
+      <view class="txt">
+        <textarea bindinput="input_content" data-index="{{idx}}" placeholder="商品符合你的期待吗？请说说你的心得"></textarea>
+        <view class="pic">
+          <view class="image">
+            <view wx:for="{{imgList[idx]}}" wx:key="">
+              <image src="{{item.path_thumb_url}}" data-index="{{idx}}" data-id="{{item.id}}" mode="scaleToFill" />
+              <icon bindtap='deleteImg' data-index="{{idx}}" data-id="{{item.id}}" class="icon-small" type="cancel" size="25" color="#ff4949"></icon>
+            </view>
+          </view>
+          <image class="addimage" data-index="{{idx}}" bindtap="showModal" src="../../../image/addImage.png" mode="scaleToFill" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="button-box">
+    <button bindtap='comment'>评价</button>
+  </view>
+</view>
+<view wx:if="{{showModalStatus}}" class="popover">
+  <view bindtap="hideModal" class="backdrop"></view>
+  <view animation="{{animationData}}" class="popover_content">
+    <view>
+      <text bindtap='shoot'>拍照</text>
+      <text bindtap='photo'>从相册中选择</text>
+    </view>
+    <view class="mt15">
+      <text bindtap="hideModal">取消</text>
+    </view>
+  </view>
+</view>

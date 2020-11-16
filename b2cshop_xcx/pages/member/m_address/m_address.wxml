@@ -1,0 +1,30 @@
+<!--pages/member/m-address/m-address.wxml-->
+<view class="container">
+  <view class="list">
+    <radio-group class="radio-group">
+      <view bindtap='choose_address' class="address-list" wx:for="{{list}}" wx:key="{{list}}" data-id="{{item.id}}">
+        <view class="user">收货人：{{item.buyer_name}}<text></text><text class="phone">{{item.mobile}}</text></view>
+        <view class="receiving">收货地址：{{item.txt_address}} {{item.address}}</view>
+        <view class="operation">
+          <label class="radio" wx:if="{{item.default=='1'}}">
+            <radio bindtap="setDefault" data-info="{{item.id}}" color="#ff4949" checked="checked"/><text>设为默认地址</text>
+          </label>
+          <label class="radio" wx:if="{{item.default=='0'}}">
+            <radio bindtap="setDefault" data-info="{{item.id}}" color="#ff4949" checked=""/><text>设为默认地址</text>
+          </label>
+          <view bindtap="delete" data-info="{{item.id}}">
+            <image src="../../../image/delete.png" mode="widthFix"></image><text>删除</text>
+          </view>
+          <view bindtap="edit" data-info="{{item}}" data-item_id="{{item.id}}">
+            <image src="../../../image/xiugai.png" mode="widthFix"></image><text>编辑</text>
+          </view>
+        </view>
+      </view>
+    </radio-group>
+  </view>
+  <view class="bottom">
+    <navigator url="../m_address_save/m_address_save">
+      <text>+</text>添加收货地址
+    </navigator>
+  </view>
+</view>

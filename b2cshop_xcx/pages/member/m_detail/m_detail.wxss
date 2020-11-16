@@ -1,0 +1,19 @@
+/* pages/member/m_detail/m_detail.wxss */
+page{background:#f5f5f5;}
+.menu-box{width:100%;height:4vh;display:flex;background-color: #fff;justify-content: space-around;align-items: center;}
+.menu-box .li{font-size: 30rpx;line-height: 4vh;color:#333;}
+.menu-box .li.active{color:#ff4949;}
+.swiper{width:100%;height:96vh;display:flex;}
+.scroll-view{width: 100%;height: 100%;}
+.list{background:#fff;width:100%;}
+.list .box{border-bottom:1px solid #f5f5f5;padding:20rpx 20rpx;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;width:100%;position:relative;}
+.list .box text{display:block}
+.list .box .title{font-size:30rpx;color:#333;width: 360rpx;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.list .box .time{font-size:24rpx;color:#999;margin-top:10rpx;}
+.list .box .price{position:absolute;top:50%;right:30rpx;font-size:40rpx;margin-top:-26rpx;color:#ff4949;}
+.list .box .price.grey{color:#4c4c4c;}
+
+
+
+
+

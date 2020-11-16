@@ -1,0 +1,2 @@
+/* pages/index/news_view/news_view.wxss */
+.content_view{padding:30rpx;color:#666;}

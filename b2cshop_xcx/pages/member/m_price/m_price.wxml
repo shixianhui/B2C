@@ -1,0 +1,16 @@
+<!--pages/member/m_price/m_price.wxml-->
+<view class="container">
+  <view class="tit">
+    <navigator url="../m_detail/m_detail" class="navigator"> 
+      <text>明细</text>
+      <view class="navigator-arrow"></view>
+    </navigator>
+    <view class="txt">
+      可用余额(元)
+      <view class="price">{{content}}</view>
+    </view>
+  </view>
+  <view style="display:none;" class="button-box">
+    <navigator url="../m_withdrawals/m_withdrawals">提 现</navigator>
+  </view>
+</view>

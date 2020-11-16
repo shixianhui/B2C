@@ -1,0 +1,24 @@
+<!--pages/member/friends/friends.wxml-->
+<view class="main">
+  <view class="rmb">
+    <view class="rmb-box">
+      <view class="l" bindtap='prompt' id='a'>
+        <view class="h3 {{prompt=='a'? 'active' : ''}}">我的好友</view>
+      </view>
+      <view class="r" bindtap='prompt' id='b'>
+        <view class="h3 {{prompt=='b'? 'active' : ''}}">好友邀请</view>
+      </view>
+    </view>
+  </view>
+  <view class="ul active">
+    <view class="li" wx:for="{{list}}" wx:key="item">
+      <view class="l-box">
+        <image class="img" src="{{item.path}}"></image>
+        <view class="txt">
+          <view class="h5">{{item.nickname}}</view>
+        </view>
+      </view>
+      <text class="join-icon">{{item.in_time}}</text>
+    </view>
+  </view>
+</view>
